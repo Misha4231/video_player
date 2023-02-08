@@ -1,0 +1,12 @@
+{% extends 'main_player/layout.html' %}
+
+{% block content %}
+    {% for video in videos %}
+        <div class="video">
+            <h3><a href="{% url 'video_page' video.slug %}">Название: {{ video.title }}</a></h3>
+            <p>Описание: {{ video.description }}</p>
+            <img src="{{ video.image.url }}" alt="" height="100px" width="250px">
+            <p>Выложено: {{video.create_at}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

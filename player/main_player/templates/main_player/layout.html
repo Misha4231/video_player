@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'main_player/styles.css' %}">
+</head>
+<body>
+    <header>Vidos Django</header>
+    {% block content %}
+    {% endblock %}
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
+</body>
+</html>

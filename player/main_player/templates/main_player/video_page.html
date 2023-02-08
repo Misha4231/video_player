@@ -1,0 +1,14 @@
+{% extends 'main_player/layout.html' %}
+
+{% block content %}
+    <div class="video">
+        <h3>Название: {{ video.title }}</h3>
+        <p>Описание: {{ video.description }}</p>
+        <p>Выложено: {{video.create_at}}</p>
+
+        <video id="my-video" class="video-js" controls preload="auto" width="250" height="100" data-setup="{}">
+            <source src="{% url 'stream' video.slug %}" type="video/mp4">
+            <source src="{% url 'stream' video.slug %}" type="video/webm">
+        </video>
+    </div>
+{% endblock %}
